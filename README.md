@@ -1,4 +1,4 @@
-Victory Code Bootcamp
+Victory Code Bootcamp 2025
 =====================
 
 This is a template repository for participants of the Victory Code Bootcamp to keep track of their homework and lesson challenge. The repository contains four folders: `coding-to-victory`, `responsive-victory`, `js`, and `react`. Each of these folders has a `lesson-11` through `lesson-12` folder, which includes `lesson-challenge` and `take-home-challenge` folders.
