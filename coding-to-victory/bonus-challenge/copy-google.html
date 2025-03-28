@@ -1,90 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
-        <meta charset="UTF-8" />
-        <title>Google Doc Copy Link Generator</title>
+        <title>Copy Google Doc</title>
         <style>
             body {
                 font-family: Arial, sans-serif;
-                max-width: 600px;
-                margin: 20px auto;
-                padding: 20px;
                 text-align: center;
+                margin-top: 100px;
             }
-            input,
             button {
-                margin: 10px 0;
-                padding: 10px;
-                width: 100%;
-                box-sizing: border-box;
+                background-color: #4caf50;
+                color: white;
+                padding: 12px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
             }
-            #copyLink {
-                background-color: #f0f0f0;
-                padding: 10px;
-                word-break: break-all;
+            button:hover {
+                background-color: #45a049;
             }
         </style>
     </head>
     <body>
-        <h1>Google Doc Copy Link Generator</h1>
-        <input
-            type="text"
-            id="docUrl"
-            placeholder="Paste Google Doc URL here"
-        />
-        <button onclick="generateCopyLink()">Generate Copy Link</button>
-        <div id="copyLink"></div>
-
-        <script>
-            function generateCopyLink() {
-                // Get the input URL
-                const originalUrl = document.getElementById('docUrl').value;
-                const copyLinkDiv = document.getElementById('copyLink');
-
-                try {
-                    // Regular expressions to extract document ID from different URL formats
-                    const patterns = [
-                        /\/document\/d\/([^\/]+)/,
-                        /\/document\/u\/0\/d\/([^\/]+)/,
-                        /id=([^&]+)/,
-                    ];
-
-                    let docId = null;
-
-                    // Try each pattern to find the document ID
-                    for (let pattern of patterns) {
-                        const match = originalUrl.match(pattern);
-                        if (match && match[1]) {
-                            docId = match[1];
-                            break;
-                        }
-                    }
-
-                    // If no ID found, try the last resort of splitting the URL
-                    if (!docId) {
-                        docId = originalUrl.split('/').pop();
-                    }
-
-                    // Validate document ID
-                    if (!docId) {
-                        throw new Error('Could not extract document ID');
-                    }
-
-                    // Generate the copy link
-                    const copyLink = `https://docs.google.com/document/d/${docId}/copy`;
-
-                    // Create a clickable link
-                    copyLinkDiv.innerHTML = `
-                    <p>Copy Link:</p>
-                    <a href="${copyLink}" target="_blank" rel="noopener noreferrer">
-                        ${copyLink}
-                    </a>
-                    <p><small>Click the link to copy the document to your Google Drive</small></p>
-                `;
-                } catch (error) {
-                    copyLinkDiv.innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
-                }
-            }
-        </script>
+        <h2>
+            Click the button below to copy the Google Doc to your Google Drive.
+        </h2>
+        <a
+            href="https://docs.google.com/document/d/11guvmv8Nq6B7QFe7tpkN72A_8VZ2u-R40G6x9Dw6MJE/copy"
+            target="_blank"
+        >
+            <button>Copy Google Doc</button>
+        </a>
     </body>
 </html>
