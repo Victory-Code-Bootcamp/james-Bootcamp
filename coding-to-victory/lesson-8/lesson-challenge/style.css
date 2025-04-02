@@ -7,7 +7,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background: #ffffff;
+    background-color: #ffffff;
     color: #333;
 }
 
@@ -21,15 +21,19 @@ header h1 {
     margin-bottom: 10px;
 }
 
+nav {
+    background-color: #90cad1;
+    padding: 10px;
+}
+
 nav ul {
     list-style: none;
-    overflow: hidden;
-    padding: 0;
+    text-align: center;
 }
 
 nav ul li {
-    float: left;
-    margin-right: 20px;
+    display: inline-block;
+    margin: 0 15px;
 }
 
 nav ul li a {
@@ -38,45 +42,45 @@ nav ul li a {
     font-weight: bold;
 }
 
-header::after {
-    content: '';
-    display: table;
-    clear: both;
-}
-
 main {
     padding: 20px;
 }
 
 .main-layout {
+    position: relative;
     overflow: hidden;
-    margin-bottom: 20px;
+    background-color: #ffffff;
+    min-height: 1px;
+}
+
+.left-content {
+    float: left;
+    width: 65%;
 }
 
 section {
-    float: left;
-    width: 65%;
     background-color: #f1faee;
     padding: 15px;
-    min-height: 150px;
-}
-
-aside {
-    float: right;
-    width: 30%;
-    background-color: #fefae0;
-    padding: 15px;
-    min-height: 150px;
+    margin-bottom: 20px;
 }
 
 article {
-    clear: both;
     background-color: #faedcd;
-    padding: 20px;
-    margin-top: 20px;
+    padding: 15px;
+}
+
+aside {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%;
+    background-color: #fefae0;
+    padding: 15px;
+    bottom: 0;
 }
 
 footer {
+    clear: both;
     background-color: #a8dadc;
     text-align: center;
     padding: 15px;
