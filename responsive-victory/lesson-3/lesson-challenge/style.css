@@ -1,0 +1,16 @@
+@media (max-width: 480px) {
+    header {
+        background-color: blue;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    header {
+        background-color: red;
+    }
+}
+
+header {
+    max-width: 600px;
+    margin: auto;
+}
