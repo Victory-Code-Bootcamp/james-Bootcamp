@@ -45,22 +45,24 @@
 function writeOutput(text) {
     document.getElementById('output').textContent = text;
 }
-
-function fizzBuzz() {
+const handleIndex = (i) => {
+    if (i % 3 === 0 && i % 5 === 0) {
+        return 'FizzBuzz\n';
+    } else if (i % 3 === 0) {
+        return 'Fizz\n';
+    } else if (i % 5 === 0) {
+        return 'Buzz\n';
+    } else {
+        return i + '\n';
+    }
+};
+const fizzBuzz = () => {
     let result = '';
     for (let i = 1; i <= 100; i++) {
-        if (i % 3 === 0 && i % 5 === 0) {
-            result += 'FizzBuzz\n';
-        } else if (i % 3 === 0) {
-            result += 'Fizz\n';
-        } else if (i % 5 === 0) {
-            result += 'Buzz\n';
-        } else {
-            result += i + '\n';
-        }
+        result += handleIndex(i);
     }
     return result;
-}
+};
 
 function sumEven(numbers) {
     let sum = 0;
@@ -94,18 +96,17 @@ function capitalizeEvenIndexes(words) {
     });
 }
 
-// Button trigger functions:
 function runFizzBuzz() {
     writeOutput(fizzBuzz());
 }
 
 function runSumEven() {
-    const result = sumEven([1, 2, 3, 4, 5, 6]);
+    const result = sumEven([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
     writeOutput(`Sum of even numbers: ${result}`);
 }
 
 function runCapitalizeAll() {
-    const result = capitalizeAll(['hello', 'world']);
+    const result = capitalizeAll(['hello', 'JAMES']);
     writeOutput(`Capitalized: ${result.join(', ')}`);
 }
 
@@ -119,6 +120,9 @@ function runCapitalizeEvenIndexes() {
         'participants',
         'rock',
         'javascript',
+        'paper',
+        'soda',
+        'pizza',
     ]);
     writeOutput(`Result: ${result.join(', ')}`);
 }
