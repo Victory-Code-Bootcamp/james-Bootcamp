@@ -1,0 +1,56 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Simple JS Challenge</title>
+    </head>
+    <body>
+        <button onclick="fizzBuzz()">Run FizzBuzz</button>
+        <pre id="output">Results will show here...</pre>
+
+        <script src="challenges.js"></script>
+    </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JS Challenge Runner</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                padding: 20px;
+            }
+            button {
+                display: block;
+                margin: 10px 0;
+                padding: 10px 15px;
+            }
+            #output {
+                margin-top: 20px;
+                padding: 15px;
+                background: #f4f4f4;
+                border: 1px solid #ccc;
+                white-space: pre-wrap;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>JavaScript Challenge Runner</h1>
+
+        <button onclick="runFizzBuzz()">Run FizzBuzz</button>
+        <button onclick="runSumEven()">Sum Even Numbers</button>
+        <button onclick="runCapitalizeAll()">Capitalize All Strings</button>
+        <button onclick="runPrintOdds()">Print Odd Numbers (1–50)</button>
+        <button onclick="runCapitalizeEvenIndexes()">
+            Capitalize Even Indexed Words
+        </button>
+
+        <div id="output">Results will appear here...</div>
+
+        <script src="challenges.js"></script>
+    </body>
+</html>
